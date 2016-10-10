@@ -32,7 +32,7 @@ html, body {
     }
 }
 
-@media screen and (max-width: 500px) /* Mobile */ {
+@media screen and (max-width: 420px) /* Mobile */ {
     body {
         background: green;
     }

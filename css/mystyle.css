@@ -8,6 +8,7 @@ html, body {
 
 #header{
     border: 2px solid navy;
+    background-image: url("../assets/goku.png");
     height: 400px;
     width:auto;
 }

@@ -17,3 +17,9 @@ html, body {
     height:400px;
     width:auto;
 }
+
+@media screen and (min-width: 480px) {
+    body {
+        background-color: lightgreen;
+    }
+}

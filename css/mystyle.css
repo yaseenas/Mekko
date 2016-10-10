@@ -58,19 +58,6 @@ ul.topnav li.icon {display: none;}
     }
 }
 
-@media screen and (max-width: 420px) /* Mobile */ {
-    body {
-        background: green;
-        text-align: center;
-    }
-
-    ul.topnav.responsive {position: relative;}
-    ul.topnav.responsive li.icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-}
 
 @media screen and (max-width:680px) {
   ul.topnav li:not(:first-child) {display: none;}

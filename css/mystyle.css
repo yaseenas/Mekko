@@ -97,3 +97,7 @@ ul.topnav li.icon {display: none;}
     text-align: left;
   }
 }
+
+::-webkit-scrollbar {
+    width: 12px;
+}

@@ -18,6 +18,10 @@ html, body {
     width:auto;
 }
 
+#myTopnav{
+    left:50%;
+}
+
 ul.topnav {
   list-style-type: none;
   margin: 0;

@@ -18,6 +18,8 @@ html, body {
     width:auto;
 }
 
+/*background-image: url("../assets/top-back@2x.jpg");*/
+
 @media screen and (min-width: 480px) {
     body {
         background-color: lightgreen;

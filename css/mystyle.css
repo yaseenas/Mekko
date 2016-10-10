@@ -23,6 +23,12 @@ html, body {
     width:auto;
 }
 
+#footer{
+    border: 2px solid navy;
+    height:400px;
+    width:auto;
+}
+
 #myTopnav{
     display: block;
     margin-left: auto;

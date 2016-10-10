@@ -20,12 +20,20 @@ html, body {
 
 /*background-image: url("../assets/top-back@2x.jpg");*/
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 980px) /* Desktop */ {
     body {
-        background-color: lightgreen;
+        background: red;
     }
+}
 
-    #main_content{
-        text-align: center;
+@media screen  and (max-width: 979px) /* Tablet */ {
+    body {
+        background: blue;
+    }
+}
+
+@media screen and (max-width: 500px) /* Mobile */ {
+    body {
+        background: green;
     }
 }

@@ -32,6 +32,10 @@ html, body {
 
 }
 
+#menu{
+    z-index: 1;
+}
+
 #main_content{
     border: 2px solid navy;
     height:400px;

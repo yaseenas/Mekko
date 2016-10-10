@@ -22,4 +22,8 @@ html, body {
     body {
         background-color: lightgreen;
     }
+
+    #main_content{
+        text-align: center;
+    }
 }

@@ -9,6 +9,14 @@ html, body {
 #header{
     border: 2px solid navy;
 
+    height: 800px;
+    width:auto;
+}
+
+#header_background{
+
+    border: 2px solid navy;
+    
     background-image: url("../assets/destinylogo.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -18,9 +26,6 @@ html, body {
 
     -webkit-filter: blur(5px); /* Chrome, Safari, Opera */
     filter: blur(5px);
-}
-
-#header_background{
 
 }
 

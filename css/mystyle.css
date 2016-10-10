@@ -18,8 +18,8 @@ html, body {
     width:auto;
 }
 
-#topnav{
-    left:50%;
+#topnav1{
+    margin-left:50px;
 }
 
 ul.topnav {

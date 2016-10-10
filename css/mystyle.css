@@ -12,8 +12,9 @@ html, body {
     background-image: url("../assets/destinylogo.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    
-    height: 400px;
+    background-size: auto 400px;
+
+    height: 800px;
     width:auto;
 }
 

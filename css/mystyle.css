@@ -14,11 +14,10 @@ html, body {
 }
 
 #header_background{
-
-    border: 2px solid navy;
-
+    
     background-image: url("../assets/destinylogo.jpg");
     background-position: center;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 
     height: 800px;

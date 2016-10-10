@@ -13,11 +13,24 @@ html, body {
     background-position: center;
     background-repeat: no-repeat;
 
-    -webkit-filter: blur(5px); /* Chrome, Safari, Opera */
-    filter: blur(5px);
-    
     height: 800px;
     width:auto;
+    z-index: 1;
+}
+
+#header_background{
+    z-index: -1;
+
+    background-image: url("../assets/destinylogo.jpg");
+    background-position: center;
+
+    -webkit-filter: blur(5px); /* Chrome, Safari, Opera */
+    filter: blur(5px);
+
+    height: 800px;
+    width:auto;
+
+
 }
 
 #main_content{

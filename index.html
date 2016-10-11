@@ -1,52 +1,74 @@
 <!DOCTYPE html>
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 <meta charset="ISO-8859-1">
 <html>
     <head>
         <title>Page Title</title>
         <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+        <script src="js/modernizr.custom.js"></script>
+         <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="dist/css/swiper.min.css">
     </head>
 
     <body>
-
         <div id="header">
-            <div id="menu">
-                <ul class="topnav" id="myTopnav">
-                        <li><a class="active" href="#home">Home</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#blog">Blog</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li class="icon">
-                        <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
-                    </li>
+            <div id="showmenu">
+                <label for="show-menu" class="show-menu">Menu</label>
+                    <input type="checkbox" id="show-menu" role="button">
+                    <ul id="menu">
+                    <li><a href="#">Home</a></li>
+                    <li>
+                    <a href="#">Gallery</a></li>
+                    <li>
+                    <a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
             </div>
 
-            <div id="header_background">
+            <div id="slideshowbox">
+                <!-- Swiper -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="assets/destinylogo.jpg" alt="Mountain View" style="width:auto;height:100%;"></div>
+                        <div class="swiper-slide"><img src="assets/clan.jpg" alt="Mountain View" style="width:100%;height:auto;"></div>
+                        <div class="swiper-slide"><img src="assets/musicevent.jpg" alt="Mountain View" style="width:auto;height:100%;"></div>
+                        <div class="swiper-slide"><img src="assets/zorro.jpg" alt="Mountain View" style="width:100%;height:auto;"></div>
+                        <div class="swiper-slide">Slide 5</div>
+                        <div class="swiper-slide">Slide 6</div>
+                        <div class="swiper-slide">Slide 7</div>
+                        <div class="swiper-slide">Slide 8</div>
+                        <div class="swiper-slide">Slide 9</div>
+                        <div class="swiper-slide">Slide 10</div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
             </div>
-
-        </div>
+        </div> 
 
         <div id="main_content">
-            <h1>This is a Heading</h1>
-            <p>This is a paragraph.</p>
         </div>
 
-        <div id="footer">
-        </div>
+   
 
+        <!-- Swiper JS -->
+            <script src="dist/js/swiper.min.js"></script>
 
+            <!-- Initialize Swiper -->
+            <script>
+            var swiper = new Swiper('.swiper-container', {
+                pagination: '.swiper-pagination',
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
+                paginationClickable: true,
+                spaceBetween: 30,
+                centeredSlides: true,
+                autoplay: 5000,
+                autoplayDisableOnInteraction: false
+            });
+            </script>
     </body>
-
-    <script>
-        function myFunction() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
-            }
-        }
-    </script>
-
 </html>

@@ -7,28 +7,9 @@ html, body {
 }
 
 #header{
-    border: 2px solid navy;
 
     height: 800px;
     width:auto;
-}
-
-#header_background{
-
-    background-image: url("../assets/destinylogo.jpg");
-    background-position: center;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-
-    margin-top:-50px;
-    height: 800px;
-    width:auto;
-
-    -webkit-filter: blur(5px); /* Chrome, Safari, Opera */
-    filter: blur(5px);
-
-    z-index: -1;
-
 }
 
 #menu{
@@ -37,9 +18,13 @@ html, body {
 }
 
 #main_content{
-    border: 2px solid navy;
     height:400px;
-    width:auto;
+    width:100%;
+}
+
+#slideshowbox{
+    width: 500px;
+    height: 500px;
 }
 
 #footer{
@@ -48,34 +33,141 @@ html, body {
     width:auto;
 }
 
-#myTopnav{
+}
+
+/*--------------------------------------------
+MENU.
+
+----------------------------------------------/*
+
+/*Strip the ul of padding and list styling*/
+ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	position: absolute;
+}
+
+/*Create a horizontal list with spacing*/
+li {
+	display:inline-block;
+	float: left;
+	margin-right: 1px;
+}
+
+/*Style for menu links*/
+li a {
+	display:block;
+	min-width:140px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #fff;
+	background: #2f3036;
+	text-decoration: none;
+}
+
+/*Hover state for top level links*/
+li:hover a {
+	background: #19c589;
+}
+
+/*Style for dropdown links*/
+li:hover ul a {
+	background: #f3f3f3;
+	color: #2f3036;
+	height: 40px;
+	line-height: 40px;
+}
+
+/*Hover state for dropdown links*/
+li:hover ul a:hover {
+	background: #19c589;
+	color: #fff;
+}
+
+/*Hide dropdown links until they are needed*/
+li ul {
+	display: none;
+}
+
+/*Make dropdown links vertical*/
+li ul li {
+	display: block;
+	float: none;
+}
+
+/*Prevent text wrapping*/
+li ul li a {
+	width: auto;
+	min-width: 100px;
+	padding: 0 20px;
+}
+
+/*Display the dropdown on hover*/
+ul li a:hover + .hidden, .hidden:hover {
+	display: block;
+}
+
+/*Style 'show menu' label button and hide it by default*/
+.show-menu {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-decoration: none;
+	color: #fff;
+	background: #19c589;
+	text-align: center;
+	padding: 10px 0;
+	display: none;
+}
+
+/*Hide checkbox*/
+input[type=checkbox]{
+    display: none;
+}
+
+/*Show menu when invisible checkbox is checked*/
+input[type=checkbox]:checked ~ #menu{
     display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-ul.topnav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+/*-------------------------------------
+
+Slideshow
+
+------------------------------------*/
+
+.swiper-container {
+width: 100%;
+height: 100%;
+
+}
+.swiper-slide {
+text-align: center;
+font-size: 18px;
+background: #fff;
+
+/* Center slide text vertically */
+display: -webkit-box;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;
+-webkit-box-pack: center;
+-ms-flex-pack: center;
+-webkit-justify-content: center;
+justify-content: center;
+-webkit-box-align: center;
+-ms-flex-align: center;
+-webkit-align-items: center;
+align-items: center;
 }
 
-ul.topnav li {float: left;}
 
-ul.topnav li a {
-  display: inline-block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  transition: 0.3s;
-  font-size: 17px;
-}
+/*------------------------------------
 
-ul.topnav li a:hover {background-color: #555;}
+Responsive mobile
 
-ul.topnav li.icon {display: none;}
+--------------------------------------*/
 
 /*background-image: url("../assets/top-back@2x.jpg");*/
 
@@ -91,30 +183,66 @@ ul.topnav li.icon {display: none;}
     }
 }
 
-
 @media screen and (max-width:680px) {
-    ul.topnav li:not(:first-child) {display: none;}
-    ul.topnav li.icon {
-        float: right;
-        display: inline-block;
-    }
-}
 
-@media screen and (max-width:680px) {
-    ul.topnav.responsive {position: relative;}
-    ul.topnav.responsive li.icon {
+    /*Make dropdown links appear inline*/
+	ul {
+		position: static;
+		display: none;
+	}
+	/*Create vertical spacing*/
+	li {
+		margin-bottom: 1px;
+	}
+	/*Make all menu links full width*/
+	ul li, li a {
+		width: 100%;
+	}
+	/*Display 'show menu' link*/
+	.show-menu {
+		display:block;
+        z-index: 1;
+	}
+
+    #menu{
+        width:100%;
+        margin-left:-40px;
+        margin-top: -1px;
         position: absolute;
-        right: 0;
-        top: 0;
     }
 
-    ul.topnav.responsive li {
-        float: none;
-        display: inline;
+    #header{
+        position: absolute;
+        height: 38px;
+        width:100%;
+        z-index: 1;
     }
 
-    ul.topnav.responsive li a {
-        display: block;
-        text-align: left;
+    #slideshowbox{
+        position: absolute;
+        width: 100%;
+        height: 400px;
+        z-index: -1;
     }
+
+    #main_content{
+        height:400px;
+        width:100%;
+        margin-top:440px;
+        position: absolute;
+    }
+
+
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+    }
+
+    .swiper-wrapper{
+        z-index: -1;
+
+    }
+
 }
